@@ -148,7 +148,7 @@ export default class EventService {
     return this.hasEventOn(new Date(now));
   }
 
-  calcDuration(Event) {
-    return Event.getEndTime() - Event.getStartTime();
+  calcDuration(event) {
+    return event.getEndTime() - event.getStartTime();
   }
 }
