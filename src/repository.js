@@ -9,6 +9,7 @@ export default class EventRepository {
 
     constructor(dbDriver) {
         this._dbDriver = dbDriver
+
     }
 
     /**

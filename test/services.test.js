@@ -32,4 +32,24 @@ describe("Event Service",()=> {
         let eventService = new EventService(new EventRepository());
         expect(eventService.getEvents().length).toBe(3);
     })
+
+    test('getFirstEvent shall return "First Event" event', async () => {
+        let eventService = new EventService(new EventRepository());
+        expect(eventService.getFirstEvent().getStartTime()).toEqual(new Date('2018-12-17T03:24:00'));
+    })
+
+    test('getLastEvent shall return "Unit test againt" event', async () => {
+        let eventService = new EventService(new EventRepository());
+        expect(eventService.getLastEvent().getTitle()).toEqual("Unit test againt");
+    })
+
+    test('getLongestEvent shall return "Hello World" event', async () => {
+        let eventService = new EventService(new EventRepository());
+        expect(eventService.getLongestEvent().getTitle()).toEqual("Hello World");
+    })
+
+    test('getShortestEvent shall return "Unit test againt" event', async () => {
+        let eventService = new EventService(new EventRepository());
+        expect(eventService.getShortestEvent().getTitle()).toEqual("Unit test againt");
+    })
 });
